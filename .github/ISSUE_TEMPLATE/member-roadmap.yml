@@ -1,0 +1,109 @@
+name: "🧭 Member Roadmap"
+description: Share your plan for the 2026/27 academic year with the chapter
+title: "[Roadmap] <Your name> - <Track>"
+labels: ["roadmap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your plan! This helps the chapter support you, connect you with teammates, and celebrate your progress.
+        Keep it realistic. A small plan you finish beats a big one you abandon. You can edit this issue any time.
+
+  - type: input
+    id: name
+    attributes:
+      label: Your name and GitHub username
+      placeholder: "Jane Doe (@janedoe)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Your track
+      options:
+        - Cloud
+        - Web
+        - Mobile
+        - AI/ML
+        - Design
+        - Not sure yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Current level in your track
+      options:
+        - Just starting
+        - Some experience
+        - Comfortable, building real projects
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Main goal for this academic year
+      description: What do you want to be able to do by the end of the year?
+      placeholder: "e.g. Deploy a full-stack app on Google Cloud and earn the Associate Cloud Engineer certification"
+    validations:
+      required: true
+
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones by period
+      description: Break your goal into steps. Add dates where you can.
+      value: |
+        - [ ] Oct - Dec 2026:
+        - [ ] Jan - Mar 2027:
+        - [ ] Apr - Jun 2027:
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills and technologies you want to learn
+      placeholder: "e.g. Docker, Terraform, Cloud Run, IAM"
+
+  - type: textarea
+    id: projects
+    attributes:
+      label: Projects you plan to build
+      description: Link repos as you create them.
+      placeholder: "e.g. A deployment pipeline for my class project (repo link when ready)"
+
+  - type: textarea
+    id: help
+    attributes:
+      label: Help you need from the chapter
+      description: Mentorship, study partners, resources, a workshop topic, etc.
+
+  - type: textarea
+    id: share
+    attributes:
+      label: What you can offer others
+      description: A talk, a study jam, a code review, a tutorial, anything you can share back.
+
+  - type: dropdown
+    id: hours
+    attributes:
+      label: Hours per week you can realistically commit
+      options:
+        - 1-3
+        - 4-6
+        - 7-10
+        - More than 10
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I'm happy for this plan to be public on the chapter's GitHub organization
+          required: true
+        - label: I will update this issue as I make progress
+          required: false
